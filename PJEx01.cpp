@@ -1,20 +1,40 @@
-// PJEx01.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//CS116PJEx01
+//20230411
+//Shun Hoi Yeung
+//900494756
 
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    double weight, height, bmi;
+
+    // Input weight and height from the user
+    cout << "Enter your weight in pounds: ";
+    cin >> weight;
+    cout << "Enter your height in inches: ";
+    cin >> height;
+
+    // Calculate BMI
+    bmi = (weight * 703) / (height * height);
+
+    // Display BMI
+    cout << "Your BMI is: " << bmi << endl;
+
+    // Determine weight category based on BMI
+    if (bmi < 18.5) {
+        cout << "Underweight" << endl;
+    }
+    else if (bmi < 25) {
+        cout << "Normal weight" << endl;
+    }
+    else if (bmi < 30) {
+        cout << "Overweight" << endl;
+    }
+    else {
+        cout << "Obese" << endl;
+    }
+
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
